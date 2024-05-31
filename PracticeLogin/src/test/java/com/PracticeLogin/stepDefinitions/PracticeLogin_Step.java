@@ -1,7 +1,9 @@
 package com.PracticeLogin.stepDefinitions;
 
+import static org.junit.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+//import org.testng.Assert;
 
 import com.PracticeLogin.pages.LoginPage;
 
@@ -53,7 +55,7 @@ public class PracticeLogin_Step {
 		Thread.sleep(1000);
 		String ActualTitle = loginPage.successMessage();
 	    String ExpectedTitle = "You are successfully logged in.";
-	    Assert.assertEquals(ExpectedTitle, ActualTitle);
+	    assertEquals(ExpectedTitle, ActualTitle);
 	    
 	}
 
@@ -79,7 +81,7 @@ public class PracticeLogin_Step {
 		Thread.sleep(1000);
 		String ActualSignInTitle = loginPage.signInMessage();
 	    String ExpectedSignInTitle = "Sign in";
-	    Assert.assertEquals(ExpectedSignInTitle, ActualSignInTitle);
+	    assertEquals(ExpectedSignInTitle, ActualSignInTitle);
 	    Thread.sleep(1000);
 	    loginPage.closeBrowser();
 	}
